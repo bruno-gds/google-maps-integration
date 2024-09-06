@@ -1,0 +1,16 @@
+<h2>{{ title }}</h2>
+
+<input type="text" placeholder="Inform the address" [(ngModel)]="address">
+<button type="submit" style="margin-left: 5px" (click)="getAddress()">ENTER</button>
+<button type="submit" style="margin-left: 5px" (click)="cleanAddress()">CLEAR</button>
+
+<div class="container" *ngIf="activeMap">
+  <iframe
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+    [src]=urlSafe>
+  </iframe>
+</div>
+
+<router-outlet></router-outlet>
